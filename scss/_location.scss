@@ -1,0 +1,277 @@
+/*location페이지---------------------------------------*/
+.content {
+	width: 100%;
+	padding: 0px 0 150px;
+
+    .sub_visual {
+        width: 100%;
+        height: 250px;
+        background: #bbb;
+        margin-bottom: 100px;
+    }
+
+	.inner{
+		
+		#store{
+			width: 420px; height: 60vw;
+			/*border: 1px solid red;*/
+			float: left;
+			padding: 50px;
+			position: relative;
+		
+			h2{
+				font: bold 35px/1.4 '맑은고딕';
+				text-align: center;
+			}
+		
+			.tap{
+				width: 100%;
+		
+				.btns{
+					width: 90%;
+					margin: 60px auto 0 ;
+					&::after{
+						content: '';
+						display: block;
+						clear: both;
+					}
+		
+					li{
+						float: left;
+						width: 50%;
+						background: #fff;
+						border: 1px solid #ddd;
+						border-bottom: none;
+						color: #999;
+						
+						a{
+						display: block;
+						width: 100%;
+						font: bold 16px/1.4 '맑은고딕';
+						text-align: center;
+						padding: 10px 15px;
+						
+						cursor: pointer;
+						}
+	
+						&.on{
+							border: 2px solid #bbb;
+							border-bottom: none;
+							color: #555;
+							background-color: #fff;
+							transform: scale(1.05);
+						}
+	
+					}
+				}
+		
+				.shop{
+		
+					article{
+						width: 80%;
+						background: #fff;
+						position: absolute;
+						border-top: 2px solid #bbb;
+						border-bottom: 2px solid #bbb;
+						opacity: 0;
+	
+		
+						ul{
+		
+							li{
+								border-bottom: 2px solid #eee;
+								padding: 15px 20px;
+								letter-spacing: -1px;
+	
+								h3{
+									a{
+										display: inline-block;
+										font: bold 16px/1.2 '맑은고딕';
+										color: #555;
+										margin-bottom: 10px;
+										cursor: pointer;
+										&:hover{
+											text-decoration: underline;
+										}
+									}
+	
+	
+								}
+		
+								p{
+									color: #888;
+									font:16px/1.4 '맑은고딕';
+									span{
+										display: block;
+									}
+								}
+	
+								.map{display: none;}
+		
+								&:last-child{
+									border-bottom: none;
+								}
+							}
+						}
+	
+						&.on{
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+		#map{
+			width: calc(100% - 420px);height: 60vw;
+			/*border: 1px solid red;*/
+		}
+	}
+}
+
+@media screen and (max-width: 1230px){
+	.inner{
+		width: 100vw;
+
+		#store{
+			width: 360px;
+			padding: 40px;
+		
+			h2{
+				font: bold 25px/1.4 '맑은고딕';
+			}
+		
+			.tap{
+		
+				.btns{
+					width: 90%;
+					margin: 10px auto 0 ;
+		
+					li{
+
+						a{
+						font: bold 14px/1.4 '맑은고딕';
+						padding: 5px 10px;
+						}
+					}
+				}
+		
+				.shop{
+		
+					article{
+	
+						ul{
+		
+							li{
+								padding: 10px 0 10px 25px;
+	
+								h3{
+									a{
+										display: inline-block;
+										font: bold 14px/1.2 '맑은고딕';
+									}
+								}
+		
+								p{font:14px/1.4 '맑은고딕';}
+		
+								&:last-child{
+									border-bottom: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#map{
+		width: calc(100% - 360px);
+	}
+
+}
+
+@media screen and (max-width: 990px){
+	.inner{
+
+		#store{
+			width: 100%;
+			padding: 20px;
+		
+			.tap{
+		
+				.btns{
+					width: 80%;
+					margin: 30px auto 0 ;
+		
+					li{
+						a{
+						font: bold 14px/1.4 '맑은고딕';
+						padding: 10px 10px;
+						}
+					}
+				}
+		
+				.shop{
+					article{
+						left: 50%;
+						transform: translateX(-50%);
+	
+						ul{
+		
+							li{
+								padding: 10px 25px;
+
+								&.on .map{display: block;}
+
+								&:hover{
+									background: rgba(239, 239, 239,0.4);
+									cursor: pointer;
+									transition: 1s;
+								}
+								&:hover h3 a{color: cornflowerblue;}
+								&:hover h3 a::after{
+									width: 100px; height: 2px;
+									transition: 0.5s;
+								}
+								&:hover p{
+									text-decoration: underline;
+									transition: 1s;
+								}
+	
+								h3{
+									a{
+										display: inline-block;
+										font: bold 14px/1.2 '맑은고딕';
+
+										&::after{
+											content: '';
+											display: block;
+											width: 0px; height: 0px;
+											background: cornflowerblue;
+											
+										}
+									}
+								}
+		
+								p{font:14px/1.4 '맑은고딕'; }
+
+								.map{
+									width: 100%; height: 400px;
+									background-color: pink;
+									margin-top: 15px;
+								}
+		
+								&:last-child{
+									border-bottom: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#map{
+		display: none;
+	}
+
+}

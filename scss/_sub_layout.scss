@@ -1,0 +1,163 @@
+/*header영역-------------------------------------------------*/
+#header_sub{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    z-index: 999;
+    background: #fff;
+
+    .inner{
+        width: 100%; height: 80px;
+        position: relative;
+
+        h1{
+            position: absolute;
+            left: 60px; bottom: 15px;
+
+            a{
+                font:bold 35px/1 'arial'; color: #444;
+            }
+        }
+
+        #gnb{
+            position: absolute;
+            left:180px ; bottom: 13px;
+
+            li{
+                float: left;
+
+                a{
+                    display: block;
+                    padding: 14px 35px; 
+                    font: bold 17px/1 'arial';
+                    color: #777;
+
+                    &:hover{
+                        color: rgb(125, 152, 69);
+                    }
+                
+                }
+
+            }
+        }
+
+        .util{
+            position: absolute;
+            top: 30px; right: 0px;
+
+            li{
+                float: left; margin-left: 20px;
+
+                &:nth-child(4){
+                    margin-left: 80px;
+                }
+
+                a{
+                    font: 14px/1 'arial'; color:#444;
+                }
+
+                i{
+                    transform: scale(1.3);
+                }
+            }
+
+
+        }
+    }
+}
+
+/* content -------------------------------------------------- */
+.content {
+	width: 100%;
+	padding: 0px 0 150px;
+
+    .sub_visual {
+        width: 100%;
+        height: 250px;
+        background: #bbb;
+        margin-bottom: 100px;
+    }
+
+    .inner {
+        width: 1180px;
+        min-height: 500px;
+        margin: 0 auto;
+
+        h1 {
+            font: normal 50px/1 "arial";
+            color: #000;
+
+            span {
+                font: normal 20px/1 "맑은 고딕";
+                color: #aaa;
+
+                &::before {
+                    content: "/";
+                    margin-right: 20px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+/*footer-------------------------------------------------------------------------------*/
+
+#footer_sub{
+    width: 100%; height: 310px;
+    background: #ededed;
+
+    .inner{
+        width: 1180px;
+        position: relative;
+        color: #999;
+
+        .footerLogo{
+            position: absolute;
+            top: 0; left: 0;
+            padding: 80px;
+            font:bold 40px/1.2 '맑은고딕';
+            
+        }
+
+        ul{
+            position: absolute;
+            top: 70px; left: 210px;
+
+            &::after{
+                content: ''; display: block; clear: both;
+            }
+
+            li{
+                float: left;
+                border-right: 2px solid #555;
+                padding: 0px 15px;
+
+                &:first-child{
+                    padding-left: 0;
+                }
+
+                &:last-child{
+                    border-right: none;
+                }
+
+                a{
+                    font: 15px/1 '맑은고딕';
+                    color: #999;
+                }
+            }
+        }
+
+        .footerInfo{
+            position: absolute;
+            top: 120px; left: 210px;
+
+            p{
+                font: 13px/1.4 '맑은고딕';
+                padding: 10px 0;
+            }
+        }
+    }
+}
+
+

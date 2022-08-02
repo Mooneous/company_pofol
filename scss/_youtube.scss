@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,700;1,400;1,700&display=swap'); 
+
+main{
+    width:100%; 
+    padding:100px 4vw; 
+
+
+    article{
+        width:100%; height:400px;
+        border-top:1px solid #999; 
+        display:flex;
+        justify-content:space-between; 
+        padding: 30px 0;
+        transition: 0.5s;
+         
+        &:last-child{
+            border-bottom: 1px solid #999;
+        }
+
+        &:hover{
+            background: #efefef;
+            transition: 1s;
+
+        }
+        &:hover .con .orderNum{
+            color: gold;
+            text-shadow: 5px 5px 5px #ddd;
+            transition: 1s;
+        }
+        &:hover .pic img{
+            filter: grayscale(0);
+            transition: 2s;
+        }
+        .con{
+            width:60%; 
+            height:100%; 
+            padding: 10px 30px 20px;
+            cursor: pointer;
+            
+
+            .orderNum{
+                font:100px/1 'Arvo'; 
+                color:rgb(202, 201, 201); 
+                display: block;
+                margin-bottom: 100px;
+                transition: 0.5s;
+                text-shadow: 5px 5px 5px #eee;
+            }
+            
+            h2{
+                font:bold 30px/1.3 "맑은 고딕"; 
+                color:#555;  margin-bottom:10px;
+                
+                //1줄로 말줄임 적용
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                &:hover{
+                    text-decoration:underline;
+                }
+
+                
+            }
+            p{
+                font:10px/1.3 '맑은 고딕'; 
+                color:#999; 
+                text-align: justify;
+                margin-bottom:20px;
+                
+                
+                //3줄로 말줄임 적용
+                white-space: normal;
+                display: -webkit-box;//블록을 수직수평역순등 마음대로 배치하는 속성
+                -webkit-line-clamp: 3;//출력 컨텐츠 줄수 제한
+                -webkit-box-orient: vertical;//박스배치방향
+                overflow: hidden;
+                
+
+                &:hover{
+                    text-decoration:underline;
+                }
+            }
+
+
+            .date{
+                font: italic 10px/1 'Arvo'; 
+                color:#333;
+                display: block;
+                text-align: right;
+            }
+        }
+
+        .pic{
+            width:35%; 
+            height:100%;  
+            display : block;
+
+            img{
+                width:100%; height:100%; 
+                object-fit:cover; 
+                filter: grayscale(1);
+                transition: 0.5s;
+
+            }
+        }
+    }
+} 
+
+aside{
+    width: 95%; height:95%;
+    background: #efefef;
+    padding: 5vw;
+    border-radius: 30% 0 ;
+    position:fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+    iframe{
+        width: 70%; height: 70%;
+        position:absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .close{
+        display: inline-block;
+        padding: 15px;
+        border-radius: 30% 0 ;
+        font: 16px/1 'Arvo';
+        color: #efefef;
+        background: gold;
+        position: absolute;
+        top: 40px; right: 40px;
+        cursor: pointer;
+    }
+    
+}

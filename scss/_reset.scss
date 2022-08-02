@@ -1,0 +1,14 @@
+/* reset */
+*{ margin:0; padding:0; box-sizing:border-box; }
+ul,ol,li{ list-style:none; }
+a{ text-decoration:none; }
+fieldset{border:none;}
+textarea{resize:none;}
+.hidden{
+    position: absolute;
+    top: -9999px;
+    opacity: 0;
+}
+table{
+    border-collapse:collapse;
+}
